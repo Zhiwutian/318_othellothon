@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+    <script src="main.js"></script>
+    <title>Reversi</title>
+</head>
+<body>
+    <header class="header">
+        <h1 class="headerTitle">Our Bad Ass Game</h1>
+    </header>
+    <div class="gameInfo">
+        <div class="turnInfo">
+            <div class="turnTitle">Turn:</div>
+            <div class="turnIcon">
+                <div class="turnIconSquare"></div>
+            </div>
+        </div>
+        <div class="scoreArea">
+            <div class="scoreTitle"></div>
+            <div class="scoreP1"></div>
+            <div class="scoreP1Count"></div>
+            <div class="scoreP2"></div>
+            <div class="scoreP2Count"></div>
+        </div>
+        <div class="gameReset">
+        <button class="resetButton"></button>
+        </div>
+    </div>
+
+
+    <div class="gameBoard">
+        <div class="square" row="0" column="0">
+            <div class="empty"></div>
+        </div>
+        <div class="square" row="0" column="1">
+            <div class="empty"></div>
+        </div>
+        <div class="square" row="0" column="2">
+            <div class="empty"></div>
+        </div>
+        <div class="square" row="0" column="3">
+            <div class="empty"></div>
+        </div>
+        <div class="square" row="0" column="4">
+            <div class="empty"></div>
+        </div>
+        <div class="square" row="0" column="5">
+            <div class="empty"></div>
+        </div>
+        <div class="square" row="0" column="6">
+            <div class="empty"></div>
+        </div>
+        <div class="square" row="0" column="7">
+            <div class="empty"></div>
+        </div>
+        <div class="square" row="1" column="0">
+            <div class="empty"></div>
+        </div>
+        <div class="square" row="1" column="1">
+            <div class="empty"></div>
+        </div>
+        <div class="square" row="1" column="2">
+            <div class="empty"></div>
+        </div>
+        <div class="square" row="1" column="3">
+            <div class="empty"></div>
+        </div>
+        <div class="square" row="1" column="4">
+            <div class="empty"></div>
+        </div>
+        <div class="square" row="1" column="5">
+            <div class="empty"></div>
+        </div>
+        <div class="square" row="1" column="6">
+            <div class="empty"></div>
+        </div>
+        <div class="square" row="1" column="7">
+            <div class="empty"></div>
+        </div>
+        <div class="square" row="2" column="0">
+            <div class="empty"></div>
+        </div>
+        <div class="square" row="2" column="1">
+            <div class="empty"></div>
+        </div>
+        <div class="square" row="2" column="2">
+            <div class="empty"></div>
+        </div>
+        <div class="square" row="2" column="3">
+            <div class="empty"></div>
+        </div>
+        <div class="square" row="2" column="4">
+            <div class="empty"></div>
+        </div>
+        <div class="square" row="2" column="5">
+            <div class="empty"></div>
+        </div>
+        <div class="square" row="2" column="6">
+            <div class="empty"></div>
+        </div>
+        <div class="square" row="2" column="7">
+            <div class="empty"></div>
+        </div>
+        <div class="square" row="3" column="0">
+            <div class="empty"></div>
+        </div>
+        <div class="square" row="3" column="1">
+            <div class="empty"></div>
+        </div>
+        <div class="square" row="3" column="2">
+            <div class="empty"></div>
+        </div>
+        <div class="square" row="3" column="3">
+            <div class="white"></div>
+        </div>
+        <div class="square" row="3" column="4">
+            <div class="black"></div>
+        </div>
+        <div class="square" row="3" column="5">
+            <div class="empty"></div>
+        </div>
+        <div class="square" row="3" column="6">
+            <div class="empty"></div>
+        </div>
+        <div class="square" row="3" column="7">
+            <div class="empty"></div>
+        </div>
+        <div class="square" row="4" column="0">
+            <div class="empty"></div>
+        </div>
+        <div class="square" row="4" column="1">
+            <div class="empty"></div>
+        </div>
+        <div class="square" row="4" column="2">
+            <div class="empty"></div>
+        </div>
+        <div class="square" row="4" column="3">
+            <div class="black"></div>
+        </div>
+        <div class="square" row="4" column="4">
+            <div class="white"></div>
+        </div>
+        <div class="square" row="4" column="5">
+            <div class="empty"></div>
+        </div>
+        <div class="square" row="4" column="6">
+            <div class="empty"></div>
+        </div>
+        <div class="square" row="4" column="7">
+            <div class="empty"></div>
+        </div>
+        <div class="square" row="5" column="0">
+            <div class="empty"></div>
+        </div>
+        <div class="square" row="5" column="1">
+            <div class="empty"></div>
+        </div>
+        <div class="square" row="5" column="2">
+            <div class="empty"></div>
+        </div>
+        <div class="square" row="5" column="3">
+            <div class="empty"></div>
+        </div>
+        <div class="square" row="5" column="4">
+            <div class="empty"></div>
+        </div>
+        <div class="square" row="5" column="5">
+            <div class="empty"></div>
+        </div>
+        <div class="square" row="5" column="6">
+            <div class="empty"></div>
+        </div>
+        <div class="square" row="5" column="7">
+            <div class="empty"></div>
+        </div>
+        <div class="square" row="6" column="0">
+            <div class="empty"></div>
+        </div>
+        <div class="square" row="6" column="1">
+            <div class="empty"></div>
+        </div>
+        <div class="square" row="6" column="2">
+            <div class="empty"></div>
+        </div>
+        <div class="square" row="6" column="3">
+            <div class="empty"></div>
+        </div>
+        <div class="square" row="6" column="4">
+            <div class="empty"></div>
+        </div>
+        <div class="square" row="6" column="5">
+            <div class="empty"></div>
+        </div>
+        <div class="square" row="6" column="6">
+            <div class="empty"></div>
+        </div>
+        <div class="square" row="6" column="7">
+            <div class="empty"></div>
+        </div>
+        <div class="square" row="7" column="0">
+            <div class="empty"></div>
+        </div>
+        <div class="square" row="7" column="1">
+            <div class="empty"></div>
+        </div>
+        <div class="square" row="7" column="2">
+            <div class="empty"></div>
+        </div>
+        <div class="square" row="7" column="3">
+            <div class="empty"></div>
+        </div>
+        <div class="square" row="7" column="4">
+            <div class="empty"></div>
+        </div>
+        <div class="square" row="7" column="5">
+            <div class="empty"></div>
+        </div>
+        <div class="square" row="7" column="6">
+            <div class="empty"></div>
+        </div>
+        <div class="square" row="7" column="7">
+            <div class="empty"></div>
+        </div>
+    </div>
+    <div class="instructions">
+
+    </div>
+    <footer class="footer">
+
+    </footer>
+
+</body>
+</html>
